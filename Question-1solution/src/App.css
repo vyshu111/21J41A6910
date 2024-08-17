@@ -1,0 +1,73 @@
+/* Root container styling */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Logo styling */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms, transform 300ms; /* Added transform for smooth scaling */
+}
+
+/* Hover effect for logo */
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.67)); /* Slightly lighter shadow */
+  transform: scale(1.05); /* Slightly enlarge logo on hover */
+}
+
+/* React logo specific hover effect */
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(97, 218, 250, 0.67)); /* React-specific shadow */
+}
+
+/* Spinning animation for logos */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation for logos with no reduced motion preference */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card styling */
+.card {
+  padding: 2em;
+  background-color: #fff; /* White background for cards */
+  border-radius: 8px; /* Rounded corners for cards */
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+  transition: box-shadow 300ms; /* Smooth transition for shadow */
+}
+
+/* Card hover effect */
+.card:hover {
+  box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Link color styling */
+.read-the-docs {
+  color: #888;
+  text-decoration: none; /* Remove underline from links */
+  font-weight: 400; /* Medium weight for readability */
+}
+
+/* Link hover effect */
+.read-the-docs:hover {
+  color: #555; /* Darker color on hover for better visibility */
+  text-decoration: underline; /* Underline for emphasis */
+}
+
